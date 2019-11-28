@@ -1,2 +1,2 @@
-# BlackScholes_impliedVol
-Some useful functions for Black &amp; Scholes -> implied volatility
+# Umplied Volatility in Black & Scholes
+A useful library to deal with implied volatility B&S model
