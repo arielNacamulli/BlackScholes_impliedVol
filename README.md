@@ -30,27 +30,31 @@ Calibration of a whole volatility curve is shown in the following example
 
 
     // inserting some data
-    VolSmile smile(Date(20,03,2020),Date(20,11,2019),F0,B);
-    smile.newSpot(2000,1120.14);
-    smile.newSpot(2425.00,0.25,-1);
-    smile.newSpot(2800.00,2.97,-1);
-    smile.newSpot(2850.00,3.95,-1);
-    smile.newSpot(3125.00,40.40,-1);
-    smile.newSpot(3200.00,6.00);
-    smile.newSpot(3100.00,50.00);
+    Date settDate(06,12,2019), matDate(20,12,2019);
+    VolSmile smile(matDate,settDate,F0,B);
+
+    smile.newSpot(2000,1117.75);
+    smile.newSpot(2475.00,0.10,-1);
+    smile.newSpot(2800.00,1.10,-1);
+    smile.newSpot(2850.00,1.50,-1);
+    smile.newSpot(2900.00,2.8,-1);
+    smile.newSpot(3150.00,20.50);
+    smile.newSpot(3075.00,19.67,-1);
+    smile.newSpot(3200.00,2.32);
     
     // printing spot volatilities
     smile.print();
     
 Those lines print the following:
 
-    0: Strike 2000   Volatility 0.356498
-    1: Strike 2425   Volatility 0.160477
-    2: Strike 2800   Volatility 0.107137
-    3: Strike 2850   Volatility 0.0980256
-    4: Strike 3100   Volatility 0.0561828
-    5: Strike 3125   Volatility 0.0517409
-    6: Strike 3200   Volatility 0.0429889
+    0: Strike 2000   Volatility 0.960643
+    1: Strike 2475   Volatility 0.399852
+    2: Strike 2800   Volatility 0.265801
+    3: Strike 2850   Volatility 0.239617
+    4: Strike 2900   Volatility 0.225121
+    5: Strike 3075   Volatility 0.153409
+    6: Strike 3150   Volatility 0.140418
+    7: Strike 3200   Volatility 0.0970397
 
 Then spline interpolation is used to get the curve
 
@@ -58,13 +62,17 @@ Then spline interpolation is used to get the curve
     
 And now the curve can be used to get the volatility for a given strike and price
 
-    double Kbar = 3150;
+    double Kbar = 3100;
     double sig = smile.interpolate(Kbar);
-    double TT = yearfrac(Date(20,11,2019),Date(20,03,2020),ACT365);
+    double TT = yearfrac(settDate,matDate,ACT365);
 
-    double price = blkprice(F0,B,Kbar,TT,sig,1);
+    double price = blkprice(F0,B,Kbar,TT,sig,1); // mkt price 46.00
+    
+Which returns a value close to the market one:
 
-Which returns a value close to the market one.
+    >> 45.9908
+
+    
 
 ## Authors
 
