@@ -44,6 +44,7 @@ Calibration of a whole volatility curve is shown in the following example
     
 Those lines print the following:
 
+    0: Strike 2000   Volatility 0.356498
     1: Strike 2425   Volatility 0.160477
     2: Strike 2800   Volatility 0.107137
     3: Strike 2850   Volatility 0.0980256
