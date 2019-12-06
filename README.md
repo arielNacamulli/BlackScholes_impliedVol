@@ -71,4 +71,4 @@ Which returns a value close to the market one.
 
 ## Acknowledgments
 
-* Part of the code used was seen during the classes of Algorithms and Parallel Programming by Professor Ardagna at Politecnico di Milano
+* Part of the code used was seen during the classes of Algorithms and Parallel Computing by Professor Ardagna at Politecnico di Milano
