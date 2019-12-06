@@ -65,3 +65,10 @@ And now the curve can be used to get the volatility for a given strike and price
 
 Which returns a value close to the market one.
 
+## Authors
+
+* **Ariel Nacamulli** - [arielNacamulli](https://github.com/arielNacamulli)
+
+## Acknowledgments
+
+* Part of the code used was seen during the classes of Algorithms and Parallel Programming by Professor Ardagna at Politecnico di Milano
