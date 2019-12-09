@@ -105,7 +105,7 @@ And then running the plotting script.
 
 In the example we obtain the following
 
-![alt](https://github.com/arielNacamulli/BlackScholes_impliedVol/edit/master/plot.png)
+!(https://github.com/arielNacamulli/BlackScholes_impliedVol/edit/master/vol_smile.png)
 ## Authors
 
 * **Ariel Nacamulli** - [arielNacamulli](https://github.com/arielNacamulli)
