@@ -103,7 +103,7 @@ One can plot volatility curve using `plotter.py` calling
     
 And then running the plotting script.
 
-In the example we obtain the following
+In the example we obtain the following (red crosses have been added to mark market spot volatilities)
 
 ![alt text](https://github.com/arielNacamulli/BlackScholes_impliedVol/blob/master/vol_smile.png "Volatility Smile")
 ## Authors
