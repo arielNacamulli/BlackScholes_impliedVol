@@ -25,6 +25,8 @@ public:
     VolSmile(const Date &_maturity, const Date &_settDate, double _forward,double _discount):
     CubicSpline({},{}), maturity(_maturity), settDate(_settDate), forward(_forward), discount(_discount){}
     void newSpot(double K, double price, int flag = 1);
+    void read(const string & file);
+    void write(const string & file, int len = 1e5) const;
     void print() const;
     void calibrate();
 };
