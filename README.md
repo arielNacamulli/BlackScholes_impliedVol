@@ -105,7 +105,7 @@ And then running the plotting script.
 
 In the example we obtain the following
 
-![alt](https://github.com/arielNacamulli/BlackScholes_impliedVol/edit/master/vol_smile.png)
+![alt text](https://github.com/arielNacamulli/BlackScholes_impliedVol/blob/master/vol_smile.png "Volatility Smile")
 ## Authors
 
 * **Ariel Nacamulli** - [arielNacamulli](https://github.com/arielNacamulli)
